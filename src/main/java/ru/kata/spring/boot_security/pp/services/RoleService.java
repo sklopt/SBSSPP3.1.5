@@ -18,9 +18,9 @@ public class RoleService {
     }
 
 
-    public Role getRole(String userRole) {
+    public Role getRole(String name) {
         return entityManager.createQuery("select r from Role r where r.name =: name", Role.class)
-                .setParameter("userRole", userRole).getSingleResult();
+                .setParameter("name", name).getSingleResult();
     }
 
 

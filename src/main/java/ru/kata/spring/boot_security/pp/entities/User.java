@@ -55,6 +55,11 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    public User(String email, String password, Collection<? extends GrantedAuthority> grantedAuthorities) {
+
+    }
+
+
     public Long getId() {
         return id;
     }
@@ -106,7 +111,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return null;
+        return name;
     }
 
     @Override
